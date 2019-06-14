@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+
+.upload-box {
+	margin: 10px 0;
+	width: 100%;
+}
+
+.file-list {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #dadada;
+}
+
+.file-list:after {
+	clear: both;
+	display: table;
+	content: "";
+}
+
+.file-list li {
+	border: 1px solid #eeeeee;
+	padding: 0;
+	width: 113px;
+	height: 113px;
+	background: none;
+	text-align: center;
+	margin: 9px 0 9px 9px;
+	position: relative;
+	display: block;
+	float: left;
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 1em;
+}
+
+.file-list .file-picker {
+	cursor: pointer;
+	background: url(//qjr-1255583256.file.myqcloud.com/public/js/plupload-2.1.4/image/file-picker.png) no-repeat center 12px;
+	border: 1px solid #eeeeee;
+	border-radius: 0;
+}
+
+.file-wrap {
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+}
+
+.progress {
+	position: absolute;
+	width: 100%;
+	top: 40px;
+	/* 以上是偏移样式 */
+	height: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+	text-align: center;
+	background-color: #3B6EF2 /* #337ab7 */;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from {
+		background-position:40px 0;
+	}
+
+	to {
+		background-position: 0 0;
+	}
+}
+
+@-o-keyframes progress-bar-stripes {
+	from {
+		background-position:40px 0;
+	}
+
+	to {
+		background-position: 0 0;
+	}
+}
+
+@keyframes progress-bar-stripes {
+	from {
+		background-position:40px 0;
+	}
+
+	to {
+		background-position: 0 0;
+	}
+}
+
+.progress-bar-striped,.progress-striped .progress-bar {
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15)
+		50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%,
+		rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%,
+		rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+
+.progress-bar.active,.progress.active .progress-bar {
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	-o-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite;
+}
+
+.file-wrap img {
+	max-height: 80px;
+}
+
+.file-status {
+	display: none;
+}
+
+.file-title {
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.file-title,.file-size {
+	line-height: 15px;
+}
+
+.file-action {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	line-height: 16px;
+	height: 20px;
+	line-height: 16px;
+	display: block;
+	z-index: 300;
+}
+
+.delete-icon {
+	display: none;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: right;
+	background: url(//qjr-1255583256.file.myqcloud.com/public/js/plupload-2.1.4/image/delete-icon.png) no-repeat;
+	width: 16px;
+	cursor: pointer;
+}
+
+.file-list li:hover .delete-icon {
+	display: block;
+}
+
+.file-action:after {
+	clear: both;
+	display: table;
+	content: "";
+}
+
+.delete-icon:hover {
+	background: url(//qjr-1255583256.file.myqcloud.com/public/js/plupload-2.1.4/image/delete-icon-hover.png) no-repeat;
+}
+
+.upload-success {
+	width: 40px;
+	height: 40px;
+	background: url(//qjr-1255583256.file.myqcloud.com/public/js/plupload-2.1.4/image/upload-success.png) no-repeat;
+	float: left;
+}
